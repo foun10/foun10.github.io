@@ -1,28 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>foun10 - coming soon</title>
 
-		<style type="text/css">
-		    html, body {height: 100%;margin: 0;}
-			body {background-color: #242424;position: relative;}
-			.logo {width: 50%;margin: 0;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
-		</style>
-	</head>
-	<body>
-		<div class="logo">
-			<svg width="100%" height="100%" viewBox="0 0 149 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
-				<g transform="matrix(1,0,0,1,0,23)">
-					<path d="M0,-23L148.41,-23L134.409,0L13.239,0L0,-23Z" style="fill:rgb(253,253,253);fill-rule:nonzero;"/>
-				</g>
-				<g transform="matrix(1,0,0,1,21.4893,58.0005)">
-					<path d="M0,-20.667L104.577,-20.667L92.548,0L11.896,0L0,-20.667Z" style="fill:rgb(253,253,253);fill-rule:nonzero;"/>
-				</g>
-				<g transform="matrix(1,0,0,1,41.8277,127.667)">
-					<path d="M0,-55L24.306,-55L43.878,-20.995L31.658,0L0,-55Z" style="fill:rgb(255,219,0);fill-rule:nonzero;"/>
-				</g>
-			</svg>
-		</div>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <title>foun10 - Ihr ecommerce Dienstleister</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Unsere Leistungen: Freelance, OXID, Performance, Enterprise, Anbindungen von Drittsystemen"
+          name="description">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
+
+    <style type="text/css">
+        body, .modal-content {
+            color: #242424;
+        }
+
+        a {
+            color: #00ACFF;
+        }
+
+        .back-to-top:hover {
+            background: #00ACFF;
+        }
+
+        #hero .btn-get-started {
+            background: #00ACFF;
+            border: 2px solid #00ACFF;
+        }
+
+        #hero .btn-services:hover {
+            background: #00ACFF;
+            border: 2px solid #00ACFF;
+        }
+
+        .nav-menu a:hover, .nav-menu li:hover > a, .nav-menu .menu-active > a {
+            color: #00ACFF;
+        }
+
+        #mobile-nav ul .menu-has-children i.fa-chevron-up {
+            color: #00ACFF;
+        }
+
+        #mobile-nav ul .menu-item-active {
+            color: #00ACFF;
+        }
+
+        .section-title-divider {
+            background: #00ACFF;
+        }
+
+        #services .service-icon {
+            background: #00ACFF;
+            border: 1px solid #00ACFF;
+        }
+
+        #services .service-item:hover .service-icon i {
+            color: #00ACFF;
+        }
+
+        #subscribe .subscribe-btn:hover {
+            background: #00ACFF;
+            border: 2px solid #00ACFF;
+        }
+
+        #portfolio .portfolio-item .details span {
+            color: #242424;
+        }
+
+        #testimonials .profile h4 {
+            color: #00ACFF;
+        }
+
+        #team .member .social a:hover {
+            color: #00ACFF;
+        }
+
+        #contact .info i {
+            color: #00ACFF;
+        }
+
+        #contact .form #sendmessage {
+            color: #00ACFF;
+            border: 1px solid #00ACFF;
+        }
+
+        #contact .form button[type="submit"] {
+            background: #00ACFF;
+        }
+
+        #header {
+            background: #242424;
+        }
+
+        #hero h1, .nav-menu a {
+            color: #FDFDFD;
+        }
+
+        #hero .btn-services {
+            border-color: #FDFDFD;
+            color: #FDFDFD;
+        }
+
+        .hero__background {
+            display: block;
+            opacity: 1;
+            height: 700px;
+            width: 360px;
+        }
+
+        .logo__image {
+            height: 30px;
+        }
+
+        #header {
+            height: 60px;
+            padding: 15px 0;
+        }
+
+        #nav-menu-container {
+            margin: 0;
+        }
+
+        .nav-menu a {
+            padding: 5px 15px;
+        }
+
+        .company-name {
+            font-family: 'Hammersmith One', sans-serif;
+            text-transform: lowercase;
+            display: block;
+            font-weight: normal;
+            font-size: 52px;
+            margin-bottom: 40px;
+        }
+
+        .service-icon .fa-user-o,
+        .service-icon .fa-clock-o {
+            padding: 0 3px;
+        }
+
+        #header {
+            background: #242424;
+        }
+
+        #mobile-nav-toggle {
+            margin: 12px 12px 0 0;
+        }
+
+        #testimonials .row {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 767px) {
+            #testimonials .pic {
+                margin: 0 auto;
+            }
+        }
+
+        @media (min-width: 768px) {
+            #testimonials .row:nth-child(2n) .col-md-3 {
+                float: right;
+            }
+        }
+
+		#team .member .pic {
+			margin-bottom: 15px;
+			overflow: hidden;
+			height: 260px;
+			border-radius: 50%;
+			border-color: #00ACFF;
+			border-width: 0px;
+			border-style: solid;
+			width: 260px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@media (min-width: 768px) {
+			#testimonials .profile, #testimonials .quote {margin-bottom: 30px;}
+			#testimonials .profile .pic {
+				height: 200px;
+				width: 200px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			#testimonials .quote {
+				margin-top: 10px;
+			}
+		}
+
+        .links {
+            text-align: center;
+        }
+        .links ul {
+            list-style: none;
+            padding: 0;
+        }
+        .links li {
+            display: inline-block;
+            padding: 5px 20px;
+        }
+    </style>
+
+    <!-- =======================================================
+      Theme Name: Imperial
+      Theme URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+      Author: BootstrapMade.com
+      Author URL: https://bootstrapmade.com
+    ======================================================= -->
+</head>
+
+<body>
+<div id="preloader"></div>
+
+<!--==========================
+Hero Section
+============================-->
+<section id="hero">
+    <div class="hero-container">
+        <div class="wow fadeIn">
+            <div class="hero-logo">
+                <img class="" src="img/logo.png" alt="Imperial">
+            </div>
+
+            <h1>
+                <span class="company-name">foun10</span>
+                Ihr ecommerce Dienstleister
+            </h1>
+            <h2>
+                Wir bieten
+                <span class="rotating">
+                Lösungen, Qualität, OXID, Enterprise, Erfahrung, Pragmatismus, Ideen, Shopware
+            </span>
+            </h2>
+            <div class="actions">
+                <a href="#about" class="btn-get-started">Los geht's</a>
+                <a href="#services" class="btn-services">Unsere Leistungen</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--==========================
+Header Section
+============================-->
+<header id="header">
+    <div class="container">
+
+        <div id="logo" class="pull-left">
+            <a href="#hero">
+                <object class="logo__image" data="img/logo-small.svg" type="image/svg+xml">
+                    <img src="img/logo-small.png" alt="" title=""/>
+                </object>
+            </a>
+        </div>
+
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li class="menu-active"><a href="#hero">Home</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#services">Leistungen</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        <!-- #nav-menu-container -->
+    </div>
+</header>
+<!-- #header -->
+
+<!--==========================
+About Section
+============================-->
+<section id="about">
+    <div class="container wow fadeInUp">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="section-title">Über uns</h3>
+                <div class="section-title-divider"></div>
+                <p class="section-description">
+                    "Alle sagen es ist nicht möglich, bis einer kommt und es einfach macht."
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container about-container wow fadeInUp">
+        <div class="row">
+
+            <div class="col-md-4 hidden-xs hidden-sm about-img">
+                <canvas class="hero__background"></canvas>
+            </div>
+
+            <div class="col-md-8 about-content">
+                <h2 class="about-title">Qualität gepaart mit Pragmatismus</h2>
+                <p class="about-text">
+                    Bei uns steht der <strong>Kunde im Vordergrund</strong>. Unsere Philosophie ist der pragmatische Perfektionismus, d.h.
+                    eine einfache und pragmatische Lösung kann je nach Anwendungsfall besser sein als eine komplett
+                    durchkonzipierte, deren Aufwand jedoch nicht im Verhältnis zu dem eigentlichen Nutzen steht.
+                    Umgekehrt gibt es Fälle in denen eine schnelle und einfache Lösung nicht so einfach wie gedacht
+                    möglich ist. Aufgrund unsere langjährigen Erfahrung können wir so gemeinsam mit dem Kunden die Lösung
+                    finden, die die Wünsche und Anforderungen des Kunden stets mit einer hohen Zufriedenheit erfüllen.
+                </p>
+
+                <h2 class="about-title">Unsere Historie</h2>
+                <p class="about-text">
+                    Wir haben uns während dem Informatik Studiums kennengelernt und währenddessen unsere erste Firma 2011
+                    gegründet. Mitte 2012 gründeten wir zusammen mit einem weiteren Mitstreiter die Jankowfsky AG. Wir
+                    platzierten uns hauptsächlich im Enterprise Bereich und betreuten Projekte für verschiedene Kunden,
+                    darunter Trigema, ADAC, Marc Cain, reisenthel, Bosch Rexroth und Amazon Pay. Diese Kunden betreuen wir
+                    zum Teil heute noch. Leider hat jede gute Zeit auch ein Ende und wir sind 2016 zurück in eine Anstellung
+                    bei einer großen eCommerce Agentur gegangen. Dort wurden die OXID Kunden hauptsächlich durch uns betreut
+                    (Auszug: EUROtops, Tredy Fashion), konnten aber auch Erfahrungen mit Shopware und Symfony sammeln.
+                </p>
+
+                <h2 class="about-title">Unsere Philosophie</h2>
+                <p class="about-text">
+                    Wir sehen uns als Spezialisten rund um die technische Umsetzung im Bereich eCommerce und nicht als
+                    Full Service Agentur, die mit möglichst vielen Buzzwords wirbt. Wir schätzen eine ehrliche
+                    Zusammenarbeit auf Augenhöhe, da dadurch die Zufriedenheit auf beiden Seiten gegeben sein kann.
+                    Neben der direkten Kundenbetreuung bzw. direkten Aufträgen sehen wir uns auch als verlängerte
+                    (technische) Werkbank für Agenturen, die entsprechendes Know-How benötigen.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--==========================
+Services Section
+============================-->
+<section id="services">
+    <div class="container wow fadeInUp">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="section-title">Unsere Leistungen</h3>
+                <div class="section-title-divider"></div>
+                <p class="section-description">
+                    Unsere Leistungen sind breit gefächert, kontaktieren Sie uns einfach.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 service-item">
+                <div class="service-icon"><i class="fa fa-user-o"></i></div>
+                <h4 class="service-title"><a href="#contact">Freelance</a></h4>
+                <p class="service-description">
+                    Sie brauchen (auch kurzfristig) Programmierleistung für ein bereits laufendes oder kommendes
+                    Projekt?
+                    In Ihrer Agentur fehlt es an zur Verfügung stehenden Entwicklern (OXID, Shopware, PHP)? Melden Sie
+                    sich!
+                </p>
+            </div>
+            <div class="col-md-4 service-item">
+                <div class="service-icon"><i class="fa fa-shopping-bag"></i></div>
+                <h4 class="service-title"><a href="#contact">OXID</a></h4>
+                <p class="service-description">
+                    Tiefgehende Erfahrung und ständige Arbeit mit dem Shopsystem von OXID eSales seit 2010.
+                    Melden Sie sich bei uns, wenn sie auf der Suche nach einer langfristigen Betreuung sind oder wenn
+                    Sie ein Einzelprojekt haben.
+                </p>
+            </div>
+            <div class="col-md-4 service-item">
+                <div class="service-icon"><i class="fa fa-rocket"></i></div>
+                <h4 class="service-title"><a href="#contact">Performance</a></h4>
+                <p class="service-description">
+                    Ihr Shop lädt zu langsam? Durch eine Analyse der Performance und der implementierten Shoplogiken
+                    können Engstellen identifiziert und in einem weiteren Schritt durch
+                    entsprechende Maßnahmen ausgebessert werden.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 service-item">
+                <div class="service-icon"><i class="fa fa-ambulance"></i></div>
+                <h4 class="service-title"><a href="#contact">Projekt-Rettung</a></h4>
+                <p class="service-description">
+                    Sie benötigen dringend eine Anpassung, die einfach nur funktionieren soll?
+                    Ihr Projekt befindet sich in einem zeitkritischen Zustand und Sie benötigen dringend eine oder zwei helfende Hände?
+                    Melden Sie sich bei uns und wir schauen zusammen wie wir Ihnen helfen können.
+                </p>
+            </div>
+            <!--<div class="col-md-4 service-item">
+              <div class="service-icon"><i class="fa fa-clock-o"></i></div>
+              <h4 class="service-title"><a href="#contact">Time-Quality-Budget</a></h4>
+              <p class="service-description">
+                Sie können entscheiden, hätten Sie gerne Unit Tests zu den gewünschten Anpassungen oder benötigen Sie einfach
+                dringend eine Anpassung, die einfach nur funktionieren soll?
+              </p>
+            </div>-->
+            <div class="col-md-4 service-item">
+                <div class="service-icon"><i class="fa fa-university"></i></div>
+                <h4 class="service-title"><a href="#contact">Enterprise</a></h4>
+                <p class="service-description">
+                    Sie benötigen Hilfe bei einem Projekt im Enterprise Umfeld? Durch unsere jahrelange Erfahrung können
+                    wir Ihnen bestimmt helfen!
+                </p>
+            </div>
+            <div class="col-md-4 service-item">
+                <div class="service-icon"><i class="fa fa-exchange"></i></div>
+                <h4 class="service-title"><a href="#contact">Anbindungen</a></h4>
+                <p class="service-description">
+                    Sie benötigen eine Anbindung des Shops an ein Drittsysteme über eine Schnittstelle (REST, SOAP
+                    o.ä.)? Sprechen Sie mit uns darüber!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--==========================
+Testimonials Section
+============================-->
+<section id="testimonials">
+    <div class="container wow fadeInUp">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="section-title">Testimonials</h3>
+                <div class="section-title-divider"></div>
+                <p class="section-description">
+                    Das sagen Kunden über uns:
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 col-md-3">
+                <div class="profile">
+                    <div class="pic"><img src="img/melanie-vogt.jpg" alt=""></div>
+                    <h4>Melanie Vogt</h4>
+                    <span>Tredy-fashion GmbH</span>
+                </div>
+            </div>
+            <div class="col-sm-8 col-md-9">
+                <div class="quote">
+                    <b><img src="img/quote_sign_left.png" alt=""></b>
+                    Mit unserem Onlineshop, den wir 2014 aufgebaut haben, beliefern wir inzwischen auch erfolgreich das benachbarte Ausland.
+                    In vielen Projekten haben uns die beiden Firmengründer Benjamin und Alexander erfolgreich beraten, begleitet und mit smarter Hands-on Mentalität unterstützt.
+                    Auf den technischen Support konnten wir uns jederzeit verlassen. Sach- und fachkundig begleitet als Experten des E-Commerce im Multichannel- Umfeld, konnten wir erfolgreich und sehr unkompliziert Innovationen umsetzen.
+                    Vor allem die Erreichbarkeit, Planbarkeit und Einhaltung der Budgets, sowie der Zeitstränge hat uns sehr begeistert.
+                    Besonders hervorheben möchten wir, dass beide Programmierer nicht nur technisch versiert, sondern auch den pragmatischen Ansatz und die Usability nie aus den Augen verloren haben.
+                    Wir können eine Zusammenarbeit mit beiden nur empfehlen.
+                    <small><img src="img/quote_sign_right.png" alt=""></small>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 col-md-3">
+                <div class="profile">
+                    <div class="pic"><img src="img/martin-klann.jpg" alt=""></div>
+                    <h4>Martin Klann</h4>
+                    <span>Reisenthel Accessoires GmbH & Co. KG</span>
+                </div>
+            </div>
+            <div class="col-sm-8 col-md-9">
+                <div class="quote">
+                    <b><img src="img/quote_sign_left.png" alt=""></b>
+                    „Keep it easy“ - unsere Philosophie gilt sowohl für unseren Online-Shop als auch unseren Anspruch an unsere Partner und Dienstleister.
+                    Mit Alexander Schneider und Benjamin Gutmann konnten wir in der Vergangenheit gut durchdachte und technisch sauber umgesetzte Lösungen auf http://www.reisenthel.com integrieren.
+                    Ihr hervorragendes fachliches Können und ihre smarte Herangehensweise sind ein Plus für jeden Online-Shop.
+                    Wir wünschen Alex und Benny viel Erfolg für den Start von foun10 und empfehlen sie sehr gern weiter!
+                    <small><img src="img/quote_sign_right.png" alt=""></small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--==========================
+Team Section
+============================-->
+<section id="team">
+    <div class="container wow fadeInUp">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="section-title">Das sind wir</h3>
+                <div class="section-title-divider"></div>
+                <p class="section-description">
+
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="member">
+                    <div class="pic"><img src="img/alex.jpg" alt=""></div>
+                    <h4>Alexander Schneider</h4>
+                    <span>Alex</span>
+                    <div class="social">
+                        <a target="_blank" href="https://www.xing.com/profile/Alexander_Schneider146"><i
+                                class="fa fa-xing"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/alexander-schneider-3a178373/"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a target="_blank" href="https://github.com/GM-Alex"><i class="fa fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="member">
+                    <div class="pic"><img src="img/benny.jpg" alt=""></div>
+                    <h4>Benjamin Gutmann</h4>
+                    <span>Benny</span>
+                    <div class="social">
+                        <a target="_blank" href="https://www.xing.com/profile/Benjamin_Gutmann3"><i
+                                class="fa fa-xing"></i></a>
+                        <a target="_blank" href="https://github.com/bgutmann"><i class="fa fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--==========================
+Contact Section
+============================-->
+<section id="contact">
+    <div class="container wow fadeInUp">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="section-title">Kontakt</h3>
+                <div class="section-title-divider"></div>
+                <p class="section-description">
+                    Bereit durchzustarten? Dann treten Sie mit uns in Kontakt.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-md-push-4">
+                <div class="info">
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        <p>foun10 UG (haftungsbeschränkt)<br />Hindenburgstr. 78<br />79211 Denzlingen</p>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <p>
+                            <a href="mailto:info@foun10.de">
+                                info@foun10.de
+                            </a>
+                        </p>
+                    </div>
+
+                    <div>
+                      <i class="fa fa-phone"></i>
+                      <p>+49 7665 529 218 8</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--==========================
+Footer
+============================-->
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="links">
+                    <ul>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#imprint">
+                                Impressum
+                            </a>
+
+                            <div class="modal fade" id="imprint" tabindex="-1" role="dialog" aria-labelledby="imprintLabel">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="imprintLabel">Impressum</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
+                                            <p>foun10 UG (haftungsbeschr&auml;nkt)<br />
+                                                Hindenburgstr. 78<br />
+                                                79211 Denzlingen</p>
+
+                                            <p>Handelsregister: HRB 720177<br />
+                                                Registergericht: Freiburg im Breisgau</p>
+
+                                            <p><strong>Vertreten durch:</strong><br />
+                                                Benjamin Gutmann<br />
+                                                Alexander Schneider</p>
+
+                                            <h2>Kontakt</h2>
+                                            <p>E-Mail: info@foun10.de</p>
+
+                                            <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+                                            <h3>Haftung f&uuml;r Inhalte</h3> <p>Als Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs.1 TMG f&uuml;r eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, &uuml;bermittelte oder gespeicherte fremde Informationen zu &uuml;berwachen oder nach Umst&auml;nden zu forschen, die auf eine rechtswidrige T&auml;tigkeit hinweisen.</p> <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unber&uuml;hrt. Eine diesbez&uuml;gliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung m&ouml;glich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p> <h3>Haftung f&uuml;r Links</h3> <p>Unser Angebot enth&auml;lt Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb k&ouml;nnen wir f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr &uuml;bernehmen. F&uuml;r die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf m&ouml;gliche Rechtsverst&ouml;&szlig;e &uuml;berpr&uuml;ft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.</p> <p>Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p> <h3>Urheberrecht</h3> <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes bed&uuml;rfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur f&uuml;r den privaten, nicht kommerziellen Gebrauch gestattet.</p> <p>Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#privacy">
+                                Datenschutz
+                            </a>
+
+                            <div class="modal fade" id="privacy" tabindex="-1" role="dialog" aria-labelledby="privacyLabel">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="privacyLabel">Datenschutzerkl&auml;rung</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h2>1. Datenschutz auf einen Blick</h2>
+                                            <h3>Allgemeine Hinweise</h3> <p>Die folgenden Hinweise geben einen einfachen &Uuml;berblick dar&uuml;ber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie pers&ouml;nlich identifiziert werden k&ouml;nnen. Ausf&uuml;hrliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgef&uuml;hrten Datenschutzerkl&auml;rung.</p>
+                                            <h3>Datenerfassung auf dieser Website</h3> <p><strong>Wer ist verantwortlich f&uuml;r die Datenerfassung auf dieser Website?</strong></p> <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten k&ouml;nnen Sie dem Impressum dieser Website entnehmen.</p> <p><strong>Wie erfassen wir Ihre Daten?</strong></p> <p>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.&nbsp;B. um Daten handeln, die Sie in ein Kontaktformular eingeben.</p> <p>Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.&nbsp;B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.</p> <p><strong>Wof&uuml;r nutzen wir Ihre Daten?</strong></p> <p>Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gew&auml;hrleisten. Andere Daten k&ouml;nnen zur Analyse Ihres Nutzerverhaltens verwendet werden.</p> <p><strong>Welche Rechte haben Sie bez&uuml;glich Ihrer Daten?</strong></p> <p>Sie haben jederzeit das Recht unentgeltlich Auskunft &uuml;ber Herkunft, Empf&auml;nger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben au&szlig;erdem ein Recht, die Berichtigung oder L&ouml;schung dieser Daten zu verlangen. Hierzu sowie zu weiteren Fragen zum Thema Datenschutz k&ouml;nnen Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden. Des Weiteren steht Ihnen ein Beschwerderecht bei der zust&auml;ndigen Aufsichtsbeh&ouml;rde zu.</p> <p>Au&szlig;erdem haben Sie das Recht, unter bestimmten Umst&auml;nden die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Details hierzu entnehmen Sie der Datenschutzerkl&auml;rung unter &bdquo;Recht auf Einschr&auml;nkung der Verarbeitung&ldquo;.</p>
+                                            <h2>2. Hosting</h2>
+                                            <h3>Externes Hosting</h3> <p>Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Webseitenzugriffe und sonstige Daten, die &uuml;ber eine Website generiert werden, handeln.</p> <p>Der Einsatz des Hosters erfolgt zum Zwecke der Vertragserf&uuml;llung gegen&uuml;ber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).</p> <p>Unser Hoster wird Ihre Daten nur insoweit verarbeiten, wie dies zur Erf&uuml;llung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen.</p>
+                                            <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
+                                            <h3>Datenschutz</h3> <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer pers&ouml;nlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerkl&auml;rung.</p> <p>Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie pers&ouml;nlich identifiziert werden k&ouml;nnen. Die vorliegende Datenschutzerkl&auml;rung erl&auml;utert, welche Daten wir erheben und wof&uuml;r wir sie nutzen. Sie erl&auml;utert auch, wie und zu welchem Zweck das geschieht.</p> <p>Wir weisen darauf hin, dass die Daten&uuml;bertragung im Internet (z.&nbsp;B. bei der Kommunikation per E-Mail) Sicherheitsl&uuml;cken aufweisen kann. Ein l&uuml;ckenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht m&ouml;glich.</p>
+                                            <h3>Hinweis zur verantwortlichen Stelle</h3> <p>Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser Website ist:</p> <p>foun10 UG (haftungsbeschr&auml;nkt)<br />
+                                            Hindenburgstr. 78<br />
+                                            79211 Denzlingen</p>
+
+                                            <p>Telefon: 07665-5292188<br />
+                                                E-Mail: info@foun10.de</p>
+                                            <p>Verantwortliche Stelle ist die nat&uuml;rliche oder juristische Person, die allein oder gemeinsam mit anderen &uuml;ber die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen, E-Mail-Adressen o. &Auml;.) entscheidet.</p>
+                                            <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3> <p>Viele Datenverarbeitungsvorg&auml;nge sind nur mit Ihrer ausdr&uuml;cklichen Einwilligung m&ouml;glich. Sie k&ouml;nnen eine bereits erteilte Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an uns. Die Rechtm&auml;&szlig;igkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unber&uuml;hrt.</p>
+                                            <h3>Widerspruchsrecht gegen die Datenerhebung in besonderen F&auml;llen sowie gegen Direktwerbung (Art. 21 DSGVO)</h3> <p>WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GR&Uuml;NDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN; DIES GILT AUCH F&Uuml;R EIN AUF DIESE BESTIMMUNGEN GEST&Uuml;TZTES PROFILING. DIE JEWEILIGE RECHTSGRUNDLAGE, AUF DENEN EINE VERARBEITUNG BERUHT, ENTNEHMEN SIE DIESER DATENSCHUTZERKL&Auml;RUNG. WENN SIE WIDERSPRUCH EINLEGEN, WERDEN WIR IHRE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI DENN, WIR K&Ouml;NNEN ZWINGENDE SCHUTZW&Uuml;RDIGE GR&Uuml;NDE F&Uuml;R DIE VERARBEITUNG NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN &Uuml;BERWIEGEN ODER DIE VERARBEITUNG DIENT DER GELTENDMACHUNG, AUS&Uuml;BUNG ODER VERTEIDIGUNG VON RECHTSANSPR&Uuml;CHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).</p> <p>WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, SO HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE DERARTIGER WERBUNG EINZULEGEN; DIES GILT AUCH F&Uuml;R DAS PROFILING, SOWEIT ES MIT SOLCHER DIREKTWERBUNG IN VERBINDUNG STEHT. WENN SIE WIDERSPRECHEN, WERDEN IHRE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT MEHR ZUM ZWECKE DER DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).</p>
+                                            <h3>Beschwerderecht bei der zust&auml;ndigen Aufsichtsbeh&ouml;rde</h3> <p>Im Falle von Verst&ouml;&szlig;en gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbeh&ouml;rde, insbesondere in dem Mitgliedstaat ihres gew&ouml;hnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des mutma&szlig;lichen Versto&szlig;es zu. Das Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.</p>
+                                            <h3>Recht auf Daten&uuml;bertragbarkeit</h3> <p>Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erf&uuml;llung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem g&auml;ngigen, maschinenlesbaren Format aush&auml;ndigen zu lassen. Sofern Sie die direkte &Uuml;bertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.</p>
+                                            <h3>SSL- bzw. TLS-Verschl&uuml;sselung</h3> <p>Diese Seite nutzt aus Sicherheitsgr&uuml;nden und zum Schutz der &Uuml;bertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschl&uuml;sselung. Eine verschl&uuml;sselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von &bdquo;http://&ldquo; auf &bdquo;https://&ldquo; wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.</p> <p>Wenn die SSL- bzw. TLS-Verschl&uuml;sselung aktiviert ist, k&ouml;nnen die Daten, die Sie an uns &uuml;bermitteln, nicht von Dritten mitgelesen werden.</p>
+                                            <h3>Auskunft, L&ouml;schung und Berichtigung</h3> <p>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft &uuml;ber Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empf&auml;nger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder L&ouml;schung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten k&ouml;nnen Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.</p>
+                                            <h3>Recht auf Einschr&auml;nkung der Verarbeitung</h3> <p>Sie haben das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Hierzu k&ouml;nnen Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden. Das Recht auf Einschr&auml;nkung der Verarbeitung besteht in folgenden F&auml;llen:</p> <ul> <li>Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen Daten bestreiten, ben&ouml;tigen wir in der Regel Zeit, um dies zu &uuml;berpr&uuml;fen. F&uuml;r die Dauer der Pr&uuml;fung haben Sie das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li> <li>Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtm&auml;&szlig;ig geschah/geschieht, k&ouml;nnen Sie statt der L&ouml;schung die Einschr&auml;nkung der Datenverarbeitung verlangen.</li> <li>Wenn wir Ihre personenbezogenen Daten nicht mehr ben&ouml;tigen, Sie sie jedoch zur Aus&uuml;bung, Verteidigung oder Geltendmachung von Rechtsanspr&uuml;chen ben&ouml;tigen, haben Sie das Recht, statt der L&ouml;schung die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li> <li>Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine Abw&auml;gung zwischen Ihren und unseren Interessen vorgenommen werden. Solange noch nicht feststeht, wessen Interessen &uuml;berwiegen, haben Sie das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li> </ul> <p>Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschr&auml;nkt haben, d&uuml;rfen diese Daten &ndash; von ihrer Speicherung abgesehen &ndash; nur mit Ihrer Einwilligung oder zur Geltendmachung, Aus&uuml;bung oder Verteidigung von Rechtsanspr&uuml;chen oder zum Schutz der Rechte einer anderen nat&uuml;rlichen oder juristischen Person oder aus Gr&uuml;nden eines wichtigen &ouml;ffentlichen Interesses der Europ&auml;ischen Union oder eines Mitgliedstaats verarbeitet werden.</p>
+                                            <h2>4. Datenerfassung auf dieser Website</h2>
+                                            <h3>Server-Log-Dateien</h3> <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns &uuml;bermittelt. Dies sind:</p> <ul> <li>Browsertyp und Browserversion</li> <li>verwendetes Betriebssystem</li> <li>Referrer URL</li> <li>Hostname des zugreifenden Rechners</li> <li>Uhrzeit der Serveranfrage</li> <li>IP-Adresse</li> </ul> <p>Eine Zusammenf&uuml;hrung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p> <p>Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Optimierung seiner Website &ndash; hierzu m&uuml;ssen die Server-Log-Files erfasst werden.</p>
+                                            <h3>Kontaktformular</h3> <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und f&uuml;r den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p> <p>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur Durchf&uuml;hrung vorvertraglicher Ma&szlig;nahmen erforderlich ist. In allen &uuml;brigen F&auml;llen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde.</p> <p>Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur L&ouml;schung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck f&uuml;r die Datenspeicherung entf&auml;llt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen &ndash; insbesondere Aufbewahrungsfristen &ndash; bleiben unber&uuml;hrt.</p>
+                                            <h3>Anfrage per E-Mail, Telefon oder Telefax</h3> <p>Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p> <p>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur Durchf&uuml;hrung vorvertraglicher Ma&szlig;nahmen erforderlich ist. In allen &uuml;brigen F&auml;llen beruht die Verarbeitung auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) und/oder auf unseren berechtigten Interessen (Art. 6 Abs. 1 lit. f DSGVO), da wir ein berechtigtes Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen haben.</p> <p>Die von Ihnen an uns per Kontaktanfragen &uuml;bersandten Daten verbleiben bei uns, bis Sie uns zur L&ouml;schung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck f&uuml;r die Datenspeicherung entf&auml;llt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen &ndash; insbesondere gesetzliche Aufbewahrungsfristen &ndash; bleiben unber&uuml;hrt.</p>
+                                            <h2>5. Plugins und Tools</h2>
+                                            <h3>Google Web Fonts</h3> <p>Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Web Fonts, die von Google bereitgestellt werden. Die Google Fonts sind lokal installiert. Eine Verbindung zu Servern von Google findet dabei nicht statt.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- #footer -->
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- Required JavaScript Libraries -->
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/superfish/hoverIntent.js"></script>
+<script src="lib/superfish/superfish.min.js"></script>
+<script src="lib/morphext/morphext.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/stickyjs/sticky.js"></script>
+<script src="lib/easing/easing.js"></script>
+
+<!-- Template Specisifc Custom Javascript File -->
+<script src="js/custom.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+
+<script type="text/javascript">
+    window.onload = function () {
+        Particles.init({
+            maxParticles: 50,
+            speed: 0.3,
+            minDistance: 100,
+            sizeVariations: 3,
+            selector: '.hero__background',
+            color: ['#00ACFF', '#0071A7'],
+            connectParticles: true
+        });
+    };
+</script>
+
+
+</body>
+
 </html>
