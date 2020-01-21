@@ -8,7 +8,7 @@
             var host = root ? root.location.hostname : "",
                 protocol = root ? root.location.protocol : "";
 
-            if ('http:' === protocol && !(/^(localhost|127.0.0.1)/).test(host)) {
+            if ('http:' === protocol && !(/^(localhost|127.0.0.1|www.foun10.de)/).test(host)) {
                 root.location = 'https:' + "//" + 'www.foun10.de' + (root.location.port ? ':' + root.location.port: '') + (root.location.pathname ? ':' + root.location.pathname: '') + (root.location.search ? ':' + root.location.search: '');
             }
         } ('undefined' !== typeof window ? window : this));
