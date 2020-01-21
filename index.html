@@ -2,6 +2,18 @@
 <html lang="en">
 
 <head>
+    <script type="text/javascript">
+        (function (root) {
+            'use strict';
+            var host = root ? root.location.hostname : "",
+                protocol = root ? root.location.protocol : "";
+
+            if ('http:' === protocol && !(/^(localhost|127.0.0.1)/).test(host)) {
+                root.location = 'https:' + "//" + 'www.foun10.de' + (root.location.port ? ':' + root.location.port: '') + (root.location.pathname ? ':' + root.location.pathname: '') + (root.location.search ? ':' + root.location.search: '');
+            }
+        } ('undefined' !== typeof window ? window : this));
+    </script>
+
     <meta charset="utf-8">
     <title>foun10 - Ihr ecommerce Dienstleister</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
